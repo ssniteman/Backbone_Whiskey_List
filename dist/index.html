@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Whiskey_App</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="leftCol">
+        <form action="" id="newWhiskey">
+          <input type="text" name="whiskey_title" class="whiskey_title" placeholder="Whiskey Title"/>
+          <textarea name="whiskey_desc" class="whiskey_desc" cols="30" rows="5" placeholder="Whiskey Description"></textarea>
+          <br />
+          <input type="submit" value="Add Whiskey"/>
+        </form>
+      </div>
+      <div class="rightCol">
+        <div class="whiskey_list"></div>
+        <div class="whiskey_edit"></div>
+      </div>
+    </div>
+
+    <script type="text/x-handlebars-template" id="whiskey_items">
+      <div class="cards">
+        {{#each drinks}}
+          <div class="card">
+            {{#if tried}}
+              <div class="ribbon-wrapper"><div class="ribbon">Tasted</div></div>
+            {{/if}}
+            <div class="card-header">{{ name }}</div>
+            <div class="card-copy"><p>{{ description }}</p></div>
+            <div class="actions">
+              <button class="toggle" id="{{_id}}">&#x2713;</button>
+              <button class="edit" id="{{_id}}">&#x270e;</button>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        {{/each}}
+      </div>
+    </script>
+
+    <script type="text/x-handlebars-template" id="whiskey_single">
+      <h3>Editing</h3><br />
+      <form action="" id="updateForm">
+        <input type="text" value="{{ name }}" class="edit_whiskey_name" />
+        <textarea class="edit_whiskey_desc" name="" id="" cols="30" rows="5">{{ description }}</textarea>
+        <input type="submit" value="Update/Cancel" />
+        <input type="hidden" value="{{ _id }}" class="whiskey_id" />
+      </form>
+      <button class="delete">Delete</button>
+    </script>
+
+    <script src="scripts/vendor.js"></script>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
