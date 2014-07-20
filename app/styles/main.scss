@@ -15,14 +15,12 @@ body {
 }
 
 .container {
-  @include outer-container;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  max-width: 30em;
+  margin: 50px auto;
 }
 
 .mainCol {
-  @include span-columns(6);
-  float: none;
+  width: 100%;
   margin: 0 auto !important;
   position: relative;
   padding-top: 35px;
