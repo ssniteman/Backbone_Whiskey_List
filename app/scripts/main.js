@@ -29,5 +29,15 @@ $('#newWhiskey').on('submit', function (event) {
 
   // Resets my form - skadoosh
   $(this).trigger('reset');
+  $('.modal-window').removeClass('modal-open');
 
+});
+
+
+// Modal Envoke
+$('.add button').on('click', function () {
+  $('.modal-window').addClass('modal-open');
+});
+$('.modal-close').on('click', function () {
+  $('.modal-window').removeClass('modal-open');
 });

@@ -24,17 +24,24 @@
   <body>
 
     <div class="container">
-      <div class="leftCol">
-        <form action="" id="newWhiskey">
-          <input type="text" name="whiskey_title" class="whiskey_title" placeholder="Whiskey Title"/>
-          <textarea name="whiskey_desc" class="whiskey_desc" cols="30" rows="5" placeholder="Whiskey Description"></textarea>
-          <br />
-          <input type="submit" value="Add Whiskey"/>
-        </form>
-      </div>
-      <div class="rightCol">
+      <div class="mainCol">
+        <div class="add"><button>+</button></div>
         <div class="whiskey_list"></div>
         <div class="whiskey_edit"></div>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-window">
+        <div class="modal-inner">
+          <label class="modal-close" for="modal-1"></label>
+          <form action="" id="newWhiskey">
+            <input type="text" name="whiskey_title" class="whiskey_title" placeholder="Whiskey Title"/>
+            <textarea name="whiskey_desc" class="whiskey_desc" cols="30" rows="5" placeholder="Whiskey Description"></textarea>
+            <br />
+            <input type="submit" value="Add Whiskey"/>
+          </form>
+        </div>
       </div>
     </div>
 

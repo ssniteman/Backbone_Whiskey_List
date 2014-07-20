@@ -16,3 +16,7 @@ window.whiskey_url = ''; // Set a URL here where you will push/pull data from
 ```
 4. Run `gulp watch` to load up an instance in your browser
 5. Enjoy a glass of your favorite whiskey
+
+### Note
+
+To prevent getting a SASS error, you'll need to follow [these directions](https://gist.github.com/twhitacre/3b1825791d808cfdcc95)
